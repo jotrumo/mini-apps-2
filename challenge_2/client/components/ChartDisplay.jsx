@@ -1,5 +1,16 @@
 import React from 'react';
 import {Line} from 'react-chartjs-2';
+import styled from 'styled-components';
+
+const ChartWrapper = styled.div`
+  background: white;
+  width: 1250px;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 2px 0;
+  padding: 10px 25px 10px 25px;
+  outline: none;
+  cursor: pointer;
+`;
 
 class ChartDisplay extends React.Component {
   constructor(props) {
@@ -48,10 +59,10 @@ class ChartDisplay extends React.Component {
         datasets: [
           {
             label: 'Price',
-            fill: false,
+            fill: true,
             lineTension: 0,
-            backgroundColor: 'rgba(75,192,192,1)',
-            borderColor: 'rgba(0,0,0,1)',
+            backgroundColor: '#23e000',
+            borderColor: 'black',
             borderWidth: 2,
             data: data.data,
           }
@@ -65,7 +76,7 @@ class ChartDisplay extends React.Component {
     if (this.state.isLoaded) {
       console.log("CHART: ", this.state.data)
       return (
-        <div>
+        <ChartWrapper>
           <Line
             data={this.state.chartState}
             options={{
@@ -80,7 +91,7 @@ class ChartDisplay extends React.Component {
               }
             }}
           />
-       </div>
+       </ChartWrapper>
       )
     } else {
       return(
