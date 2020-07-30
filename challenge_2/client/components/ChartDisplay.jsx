@@ -82,7 +82,7 @@ class ChartDisplay extends React.Component {
             options={{
               title:{
                 display:true,
-                text:'Bitcoin Price Index (BPI)',
+                text:'Bitcoin Price Index (BPI) USD',
                 fontSize:20
               },
               legend:{

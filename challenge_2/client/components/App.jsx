@@ -20,7 +20,7 @@ const Title = styled.div`
   color: black;
   font-weight: 900px;
   font-size: 40px;
-  top: 60px;
+  top: 40px;
   left: 150px;
 `;
 
